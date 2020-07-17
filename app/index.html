@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wood To-Do</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+        <meta name="theme-color" content="#327bf0">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="stylesheet" type="text/css" href="style.css" >
+        <link rel="manifest" href="manifest.json">
+        <script src="app.js"></script>
+        <script src="pwabuilder-sw.js"></script>
+        <!--<script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>-->
+        <script type="module" src="pwainstall.js"></script>
+        <script type="module">
+            import 'pwaupdate.js';
+
+            const el = document.createElement('pwa-update');
+            document.body.appendChild(el);
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <p>
+                <div id="controls">
+                    <div id="top">
+                                <h4>Wood To-Do</h4>
+                        </div>
+                        <img src="favicon.ico" style="width: 15px;">
+                    </div>
+                        <!--<div id="menubutton"><a href="javascript:menuopen()" id="menulink" id="button">MENU&#9776;</a></div>
+                        <div id="menubutton"><a href="javascript:fmenuopen()" id="menulink" id="button">File</a></div>
+                        <div id="menu" class="hiddenmenu">
+                        </div>-->
+            </p>
+        </div>
+              <input type="text" name="text" id="text" placeholder="  Your Note">
+              <img src="add.svg" onclick="add()" id="plusb">
+        <div id="container">
+              <ul id="dos">
+            </ul>
+        </div>
+    </body>
+</html>
