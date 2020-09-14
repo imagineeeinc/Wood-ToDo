@@ -160,7 +160,7 @@ setTimeout(function(){
   var re = sto.indexOf(that);
   sto.splice(re, re);
   if (sto.indexOf(that) > -1) {
-      sto.pop()
+      sto.shift()
   }  
   console.log(sto)
   if(check_web_storage_support() == true) {
