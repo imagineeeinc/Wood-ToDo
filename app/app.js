@@ -159,7 +159,9 @@ setTimeout(function(){
   var sto = JSON.parse(localStorage.getItem("does"))
   var re = sto.indexOf(that);
   sto.splice(re, re);
-
+  if (sto.indexOf(that) > -1) {
+      sto.pop()
+  }  
   console.log(sto)
   if(check_web_storage_support() == true) {
       obte = sto
